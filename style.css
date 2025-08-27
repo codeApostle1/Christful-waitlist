@@ -1,3 +1,132 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+ /*  --primary: #092C4C; incorrect */ 
+ 
+ --primary : #8B0C0C;
+  --secondary: #808000; /* Christful secondary color */
+  --white: #ffffff;
+  --gray: #f4f4f4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
 body {
-    font-size: 15pt;
+  background: var(--white);
+  color: var(--primary);
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  padding: 1rem 2rem;
+  text-align: center;
+  background: var(--primary);
+  color: var(--white);
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background: url('images/bg-vector.svg') no-repeat center/cover;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(9, 44, 76, 0.4); /* dark overlay for text contrast */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: var(--white);
+  max-width: 600px;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Waitlist Form */
+.waitlist-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.waitlist-form input {
+  padding: 0.8rem;
+  border: 2px solid white;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.waitlist-form input:focus {
+  border: 2px solid #00ff;
+}
+
+.waitlist-form button {
+  padding: 0.8rem;
+  background: var(--primary);
+  color: var(--white);
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.waitlist-form button:active {
+  background: white;
+  color:var(--primary);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--primary);
+  color: var(--white);
+  margin-top: 1rem;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .hero-content h2 {
+    font-size: 2.5rem;
+  }
+
+/*   .waitlist-form {
+  flex-direction: row;
+} */
+
+  .waitlist-form input {
+    flex: 1;
+  }
+
+  .waitlist-form button {
+    flex: 0 0 auto;
+  }
 }
